@@ -8,7 +8,7 @@
     "contributorGenerate": "all-contributors generate",
     "pretest": "eslint src",
     "prepublish": "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
-    "test": "ava src/__tests__/"
+    "test": "ava src/__tests__/*.js"
   },
   "files": [
     "LICENSE-MIT",
@@ -22,7 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "all-contributors-cli": "^3.0.5",
-    "ava": "^0.16.0",
+    "ava": "^2.4.0",
     "@babel/cli": "^7.4.5",
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-export-default-from": "^7.4.5",
@@ -45,7 +45,7 @@
     "postcss": "^6.0.14"
   },
   "ava": {
-    "require": "babel-register"
+    "require": "@babel/register"
   },
   "eslintConfig": {
     "extends": "cssnano"
